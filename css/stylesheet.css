@@ -1132,8 +1132,8 @@ audio {
 	bottom: -200px;
 	opacity: 0.6;
 	z-index: 99;
-	width: 100px;
-	height: 183px;
+	width: 100px; /* width: 100px;  */
+	height: 183px; /* height: 183px; */
 	background-repeat: no-repeat no-repeat;
 	background-size: 100px 183px;
 }
@@ -1320,13 +1320,14 @@ audio {
 }
 
 .cake-cover {
-	margin-top: 50px;
+	margin-top: 110px;
 }
 
 .message {
+	margin:20px;
   position: absolute;         /* take it out of flow */
   top: 80%;                   /* center vertically */
-  left: 50%;                  /* center horizontally */
+  left: 45%;                  /* center horizontally */
   transform: translate(-50%, -50%);
   width: 90%;                 /* adjust as needed */
   text-align: center;
@@ -1363,6 +1364,12 @@ audio {
         color: #fff;
         background-color: #466baf;
     }
+
+	#mjWish{
+		margin-top: 130px;
+		font-size: 50px;
+
+	}
 
 
 
