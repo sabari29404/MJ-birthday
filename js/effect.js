@@ -195,9 +195,10 @@ $('document').ready(function(){
 				});
 			} else {
 				// Last message stays + cake comes back
-				$messages.eq(i).fadeIn('slow').promise().done(function(){
-					$('.cake').fadeIn('fast');
-				});
+				// $messages.eq(i).fadeIn('slow').promise().done(function(){
+				// 	$('.cake').fadeIn('fast');
+				// });
+				$messages.eq(i).fadeIn('slow');
 			}
 		}
 
@@ -218,6 +219,12 @@ $('.album-photo').click(function() {
 // Close when clicking outside image
 $('#lightbox').click(function(e) {
     if (e.target !== this) return; // only close if background clicked
+    $('#lightbox').fadeOut('fast');
+});
+
+// Close when clicking the X mark
+$('.close-btn').click(function(e) {
+    e.stopPropagation();
     $('#lightbox').fadeOut('fast');
 });
 

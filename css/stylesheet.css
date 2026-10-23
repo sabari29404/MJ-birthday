@@ -1032,7 +1032,7 @@ audio {
 	max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-	margin-top: 90px;
+	margin-top: 76px;
 }
 .bannar-come {
 	-webkit-animation: bannar_come linear 6s;
@@ -1371,10 +1371,20 @@ audio {
     }
 
 	#mjWish{
-		margin-top: 130px;
-		font-size: 50px;
+		margin-top: 80px;
+		font-size: 55px;
 
 	}
+
+	.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    z-index: 10000;
+}
 
 
 
