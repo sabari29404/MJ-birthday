@@ -1352,6 +1352,7 @@ audio {
 }
 
 .btn-primary {
+		margin-bottom: 20px;
         border-color: #466baf;
         padding: 10px;
         text-transform: uppercase;
