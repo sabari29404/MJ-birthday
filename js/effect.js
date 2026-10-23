@@ -221,6 +221,13 @@ $('#lightbox').click(function(e) {
     $('#lightbox').fadeOut('fast');
 });
 
+const image = document.getElementById("zoom-img");
+const button = document.getElementById("cake_fadein");
+
+button.addEventListener("click", function () {
+    image.style.display = "none";
+});
+
 
 
 
