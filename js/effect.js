@@ -51,9 +51,13 @@ $('document').ready(function(){
 			$('#balloons_flying').fadeIn('slow');
 
 		// Show the album photos
-		$('.album-photo').fadeIn('slow');
+		// $('.album-photo').fadeIn('slow');
 
-		$('.can-zoom').fadeIn('slow');
+		// $('.can-zoom').fadeIn('slow');
+
+		// Show the album photos and special letter button
+$('.album-photo').fadeIn('slow');
+$('.can-zoom').fadeIn('slow');
 
 		});
 	});
@@ -119,7 +123,7 @@ $('document').ready(function(){
 	$('#balloons_flying').click(function(){
 		$('.balloon-border').animate({top:-500},8000);
 		$('#b1,#b4,#b5,#b7').addClass('balloons-rotate-behaviour-one');
-		$('#b2,#b3,#b6',).addClass('balloons-rotate-behaviour-two');
+		$('#b2,#b3,#b6').addClass('balloons-rotate-behaviour-two');
 		// $('#b3').addClass('balloons-rotate-behaviour-two');
 		// $('#b4').addClass('balloons-rotate-behaviour-one');
 		// $('#b5').addClass('balloons-rotate-behaviour-one');
@@ -198,12 +202,19 @@ $('document').ready(function(){
 				// $messages.eq(i).fadeIn('slow').promise().done(function(){
 				// 	$('.cake').fadeIn('fast');
 				// });
-				$messages.eq(i).fadeIn('slow');
+				// $messages.eq(i).fadeIn('slow');
+				$messages.eq(i).fadeIn('slow', function () {
+    if (this.id === 'mjWish') {
+        $('#specialLetterWrap').fadeIn('slow');
+    }
+});
 			}
 		}
 
 		msgLoop(0);
-	});
+	}
+);
+
 
 });
 
@@ -234,6 +245,47 @@ const button = document.getElementById("cake_fadein");
 button.addEventListener("click", function () {
     image.style.display = "none";
 });
+
+
+
+$('#wish_message').on('click', function () {
+    confetti({
+        particleCount: 120,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+});
+
+
+/* ================= SPECIAL BIRTHDAY LETTER ================= */
+
+// Open the letter
+$('#openSpecialLetter').on('click', function () {
+    $('#specialLetterModal')
+        .css('display', 'flex')
+        .hide()
+        .fadeIn(300);
+});
+
+// Close using the X button
+$('#closeSpecialLetter').on('click', function () {
+    $('#specialLetterModal').fadeOut(250);
+});
+
+// Close when clicking outside the letter card
+$('#specialLetterModal').on('click', function (e) {
+    if (e.target === this) {
+        $(this).fadeOut(250);
+    }
+});
+
+// Close using the Escape key
+$(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+        $('#specialLetterModal').fadeOut(250);
+    }
+});
+
 
 
 
