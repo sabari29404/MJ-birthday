@@ -1397,7 +1397,7 @@ audio {
     display: none;
     position: fixed;
     left: 50%;
-	margin-bottom: 120px;
+	margin-bottom: 90px;
     bottom: 105px;
     transform: translateX(-50%);
     width: max-content;
